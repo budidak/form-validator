@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -56,6 +61,26 @@ h2 {
   border-color: #777;
 }
 
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
 .form button {
   cursor: pointer;
   background-color: #3498db;
@@ -68,3 +93,4 @@ h2 {
   margin-top: 20px;
   width: 100%;
 }
+
